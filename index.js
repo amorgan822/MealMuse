@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let navigating = false;
     let navBar = document.querySelector('header nav ul');
     let header = document.querySelector('header'); // Select the header element
+    // let links = document.querySelectorAll('.nav-link');
 
     navigation.addEventListener('click', function () {
         navigating = !navigating;
@@ -30,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Select all the links in the navigation menu
-    // let links = document.querySelectorAll('.nav-link');
     // links.forEach(function (link) {
     //     // Add a click event listener to each link
     //     link.addEventListener('click', function () {
@@ -38,17 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
     //         // navBar.classList.remove('show');
     //         // header.classList.remove('dark-bg');
     //         // navigation.innerHTML = '&#9776;';
-
+    //         // console.log('clicked');
     //         links.forEach(function (el) {
     //             el.classList.remove('active');
     //         });
     //         this.classList.add('active');
     //     });
-    // }
+    // });
 
 });
-
-// document.querySelector('.toggle-menu').addEventListener('click', function () {
-//     console.log("Navigation clicked");
-//     document.querySelector('nav ul').classList.toggle('show');
-// });
