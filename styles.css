@@ -75,4 +75,25 @@ nav ul li a {
         display: block;
         padding: 10px;
     }
+
+}
+
+.generic-button {
+    color: white;
+    background-color: #BDB3B6;
+    padding: 20px 10px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.generic-button:hover {
+    background-color: #8c8788;
+}
+
+.button-div {
+    display: flex;
+    flex-direction: column;
 }
