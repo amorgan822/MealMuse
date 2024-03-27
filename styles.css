@@ -1,10 +1,17 @@
 header {
     background-color: #97CDFF;
     color: #fff;
-    padding: 10px 0;
     text-align: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
     transition: background-color 0.3s ease;
+}
+
+body {
+
+    margin: 0px;
 }
 
 header.dark-bg {
@@ -32,18 +39,24 @@ nav ul {
     justify-content: center;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
 .show {
     display: block;
+}
+
+.navBar {
+    overflow: hidden;
+    background-color: #97CDFF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav-link {
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 32px;
 }
 
 .nav-link.active {
@@ -52,7 +65,13 @@ nav ul li a {
     background-color: #77b6f1;
 }
 
-@media screen and (max-width: 768px) {
+.main {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 768px) {
     .toggle-menu {
         display: block;
     }
@@ -67,12 +86,7 @@ nav ul li a {
         padding: 10px 0;
     }
 
-    nav ul li {
-        text-align: center;
-        margin: 0;
-    }
-
-    nav ul li a {
+    .nav-link {
         display: block;
         padding: 10px;
     }
