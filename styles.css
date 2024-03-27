@@ -17,8 +17,8 @@ header.dark-bg {
     border: none;
     color: #fff;
     font-size: 1.5rem;
-    cursor: pointer;
     position: absolute;
+    cursor: pointer;
     top: 30px;
     right: 20px;
 }
