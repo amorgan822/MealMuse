@@ -126,8 +126,6 @@ nav ul {
 }
 
 .button-not-clickable {
-    width: 80vw;
-    height: 4vh;
     display: inline-flex;
     align-items: center;
     color: white;
