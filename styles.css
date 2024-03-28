@@ -1,3 +1,5 @@
+/* TOP BAR */
+/* top back style */
 header {
     background-color: #97CDFF;
     color: #fff;
@@ -9,46 +11,46 @@ header {
     transition: background-color 0.3s ease;
 }
 
+/* top bar text */
 h1 {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    font-size: 5.0rem;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 2.0rem;
 }
 
+/* top bar style for back arrow combination */
+.topBar {
+    display: flex;
+    flex-direction: row;
+}
+
+/* BACK ARROW */
 .back-text {
     color: #fff;
     text-decoration: none;
-    margin-top: 5%;
-    margin-bottom: 5%;
     margin-left: 5%;
-    margin-right: 20%;
+    margin-right: 30%;
 }
 
+/* back arrow text size */
 .arrow-left {
-    font-size: 10.0rem;
+    font-size: 4.5rem;
 }
 
+/* BODY STYLE */
+/* get rid of white margin */
 body {
-
     margin: 0px;
 }
 
-header.dark-bg {
-    background-color: #77b6f1;
+/* body scrolling margin */
+.main {
+    margin-top: 12%;
+    margin-bottom: 10%;
 }
 
-.toggle-menu {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    position: absolute;
-    cursor: pointer;
-    top: 30px;
-    right: 20px;
-}
-
+/* NAVIGATION BAR */
+/* navigation list style */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -58,10 +60,7 @@ nav ul {
     justify-content: center;
 }
 
-.show {
-    display: block;
-}
-
+/* navigation style */
 .navBar {
     overflow: hidden;
     background-color: #97CDFF;
@@ -70,81 +69,50 @@ nav ul {
     width: 100%;
 }
 
+/* navigation text */
 .nav-link {
     float: left;
     color: #fff;
     text-decoration: none;
-    padding: 14px 16px;
-    font-size: 5.0rem;
-    margin: 10%;
+    padding: 10px;
+    font-size: 2.0rem;
 }
 
+/* active background for navigation */
 .nav-link.active {
-    font-weight: bold;
     padding: 10px;
     background-color: #77b6f1;
 }
 
-.main {
-    margin-top: 30%;
-    margin-bottom: 50px;
-}
-
-
-@media only screen and (max-width: 768px) {
-    .toggle-menu {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #5696d1;
-        padding: 10px 0;
-    }
-
-    .nav-link {
-        display: block;
-        padding: 10px;
-    }
-
-}
-
+/* DEFINE BUTTON STYLE*/
+/* overall button style */
 .generic-button {
     display: inline-flex;
     align-items: center;
     color: white;
     background-color: #BDB3B6;
-    padding: 2% 5%;
-    margin: 5% 8%;
+    margin: 1% 10%;
     border: none;
     border-radius: 18px;
     cursor: pointer;
-    font-size: 1.5rem;
 }
 
 .generic-button:hover {
     background-color: #b1a9ab;
 }
 
+/* button column defined */
 .button-div {
     display: flex;
     flex-direction: column;
 }
 
+/* button element text */
 .button-text {
     flex-grow: 1;
     color: #fff;
     text-decoration: none;
-    font-size: 5.0rem;
-}
-
-.topBar {
-    display: flex;
-    flex-direction: row;
+    font-size: 2.0rem;
 }
 
 .arrow {
@@ -166,9 +134,64 @@ nav ul {
     font-size: 1.5rem;
 }
 
+/* Search text input style */
 #textInput {
     width: 300px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+/* MOBILE STYLE */
+@media only screen and (max-device-width: 480px) {
+
+    /* TOP BAR */
+    h1 {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 5.0rem;
+    }
+
+    /* BACK ARROW */
+    .back-text {
+        text-decoration: none;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 20%;
+    }
+
+    /* back arrow text size */
+    .arrow-left {
+        font-size: 10.0rem;
+    }
+
+    /* NAVIGATION BAR */
+    /* class for navigation text */
+    .nav-link {
+        padding: 14px 16px;
+        font-size: 5.0rem;
+        margin: 10%;
+    }
+
+    /* BODY STYLE */
+    /* body scrolling margin */
+    .main {
+        margin-top: 30%;
+        margin-bottom: 10%;
+    }
+
+    /* DEFINE BUTTON STYLE*/
+    /* overall button style */
+    .generic-button {
+        padding: 2% 5%;
+        margin: 5% 8%;
+        font-size: 1.5rem;
+    }
+
+    /* button element text */
+    .button-text {
+        font-size: 5.0rem;
+    }
+
 }
