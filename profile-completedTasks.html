@@ -1,9 +1,11 @@
-<!-- all the dishes, ingrdents, cuisine pages, has back arrow -->
+<!-- completed tasks page, has back arrow to profileHome -->
 <html>
 
+<!-- header -->
 <head>
-  <title>Let's Cook!</title>
+  <title>Let's Cook</title>  
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="profile-completedTasks.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="index.js"></script>
 </head>
@@ -11,8 +13,8 @@
 <body>
   <header>
     <div class="topBar">
-      <a class="back-text" href="index.html"><span class="arrow-left">&#8249;</span></a>
-      <h1>Let's Cook!</h1>
+      <a class="back-text" href="profileHome.html"><span class="arrow-left">&#8249;</span></a>
+      <h1>Completed Tasks</h1>
     </div>
     <nav>
       <ul class="navBar">
@@ -23,9 +25,18 @@
       </ul>
     </nav>
   </header>
+  
   <div class="button-div main">
-
-  </div>
+        <button type="button" class="generic-button">Tacos</button>
+        <button type="button" class="generic-button">
+          <span>
+              <div>Points: 12</div>
+              <div>Completed: Feb 12 2024</div>
+              <div>Rating: 4/5</div>
+          </span>
+      </button>
+        <button type="button" class="generic-button">Completed Dishes</button>
+    </div>
 
 </body>
 

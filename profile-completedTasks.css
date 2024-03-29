@@ -1,0 +1,17 @@
+.button-div {
+    text-align: left;
+}
+
+.generic-button {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.generic-button span {
+    text-align: left;
+}
+
+.generic-button span div {
+    display: block;
+    padding-left: 10px;
+}
