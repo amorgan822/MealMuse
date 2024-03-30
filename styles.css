@@ -20,7 +20,7 @@ body {
     font-style: normal;
 }
 
-/* universal selector?  ask Joanna if there is some other way to do this, or do manually!*/
+/* universal selector? ask Joanna if there is some other way to do this, or do manually!*/
 * {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
