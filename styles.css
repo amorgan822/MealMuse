@@ -16,11 +16,15 @@ body {
     background:linear-gradient(to bottom, #d80028, #ffa800);
     margin: 0px;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* universal selector?  ask Joanna if there is some other way to do this, or do manually!*/
 * {
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* top bar text */
