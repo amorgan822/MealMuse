@@ -9,11 +9,12 @@ header {
     overflow: hidden;
     width: 100%;
     transition: background-color 0.3s ease;
+    z-index: 999;
 }
 
 /* background color for body  */
 body {
-    background:linear-gradient(to bottom, #d80028, #ffa800);
+    background: linear-gradient(to bottom, #d80028, #ffa800);
     margin: 0px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -158,6 +159,43 @@ nav ul {
     border-radius: 5px;
 }
 
+/* define the style for the completion circles */
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #37104E;
+    border-style: solid;
+    border-width: 7px;
+    border-color: #15FF10;
+    cursor: pointer;
+    position: relative;
+    margin-left: 5px;
+}
+
+#check {
+    display: none;
+    /* Position the icon relative to the circle */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Center the icon */
+    transform: translate(-50%, -50%);
+    color: #37104E;
+    font-size: 5.0rem;
+}
+
+/* define style for when circle is clicked*/
+.circle.clicked {
+    background-color: #15FF10;
+    /* Change the background color when clicked */
+}
+
+/* toggle check mark */
+#check.show {
+    display: block;
+}
+
 /* MOBILE STYLE */
 @media only screen and (max-device-width: 480px) {
 
@@ -207,7 +245,7 @@ nav ul {
 
     /* button element text */
     .button-text {
-        font-size: 5.0rem;
+        font-size: 4.0rem;
     }
 
 }
