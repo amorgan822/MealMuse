@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Joanna",
+      "points": 100
+    },
+    {
+      "id": 2,
+      "name": "Alex",
+      "points": 150
+    },
+    {
+      "id": 3,
+      "name": "Petros",
+      "points": 80
+    }
+  ]
+}
