@@ -3,7 +3,44 @@
     {
       "id": 1,
       "name": "Joanna",
-      "points": 100
+      "points": 115,
+      "tasks": [
+        {
+          "name": "tacos",
+          "points": 15,
+          "status": 0
+        },
+        {
+          "name": "japanese",
+          "points": 10,
+          "status": 0
+        },
+        {
+          "name": "lamb",
+          "points": 5,
+          "status": 0
+        },
+        {
+          "name": "italian",
+          "points": 10,
+          "status": 0
+        },
+        {
+          "name": "sushi",
+          "points": 15,
+          "status": 0
+        },
+        {
+          "name": "ice cream",
+          "points": 15,
+          "status": 0
+        },
+        {
+          "name": "soup",
+          "points": 15,
+          "status": 0
+        }
+      ]
     },
     {
       "id": 2,
