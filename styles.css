@@ -10,6 +10,9 @@ header {
     width: 100%;
     transition: background-color 0.3s ease;
     z-index: 999;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* background color for body  */
