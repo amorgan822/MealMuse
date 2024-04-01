@@ -5,4 +5,4 @@ CIS 4120 Final Project
 1. sudo  npm install -g json-server@0.17.4
 
 # Run this command to start the server
-2. json-server --watch db.jso
+2. json-server --watch db.json
