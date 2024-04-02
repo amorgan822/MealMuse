@@ -272,6 +272,31 @@ nav ul {
 
 }
 
+.horizontal-scroll {
+    display: flex;         /* Aligns children in a row */
+    overflow-x: auto;      /* Enables horizontal scrolling */
+    white-space: nowrap;   /* Prevents wrapping of content */
+    height: 100vh;         /* Example height */
+    align-items: stretch;  /* Stretch items to fill the container height */
+}
+
+.horizontal-section {
+    flex: 0 0 auto;        /* Prevents sections from growing or shrinking */
+    width: 100vw;         /* Each section takes full viewport width */
+    margin: 10px;         /* Optional margin for spacing between sections */
+    background-color: lightblue; /* Example background color */
+    display: flex;        /* To center content, if needed */
+    justify-content: center; /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+}
+
+.food-icon {
+    width: 400px;              /* Width of the square */
+    height: 400px;             /* Height of the square */
+    background-color: white;   /* Background color of the square */
+    border: 5px #37104E;
+}
+
 
 /* MOBILE STYLE */
 @media only screen and (max-device-width: 480px) {
