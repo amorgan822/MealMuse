@@ -8,20 +8,31 @@ header {
     top: 0;
     overflow: hidden;
     width: 100%;
-    transition: background-color 0.3s ease;
     z-index: 999;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-/* background color for body  */
-body {
-    background: linear-gradient(to bottom, #d80028, #ffa800);
-    margin: 0px;
+.statusBar {
+    background-color: #5E0076;
+    margin-top: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-style: solid;
+    border-color: #fff;
+    padding: 1%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 2.0rem;
 }
 
 /* universal selector? ask Joanna if there is some other way to do this, or do manually!
@@ -34,8 +45,8 @@ body {
 
 /* top bar text */
 h1 {
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     font-size: 2.0rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -62,14 +73,18 @@ h1 {
 }
 
 /* BODY STYLE */
-/* get rid of white margin */
+/* background color for body  */
 body {
+    background: linear-gradient(to bottom, #d80028, #ffa800);
     margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* body scrolling margin */
 .main {
-    margin-top: 12%;
+    margin-top: 17%;
     margin-bottom: 10%;
 }
 
@@ -116,25 +131,26 @@ nav ul {
 .generic-button {
     display: inline-flex;
     align-items: center;
-    color: white;
+    justify-content: space-around;
     background-color: #5E0076;
-    margin: 1% 10%;
+    margin: 1% 6%;
     border: none;
     border-radius: 18px;
     cursor: pointer;
+
+    flex-grow: 1;
+    color: white;
+    text-decoration: none;
+    font-size: 2.0rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .generic-button:hover {
     background-color: #540069;
 }
 
-/* button column defined */
-.button-div {
-    display: flex;
-    flex-direction: column;
-}
-
-/* button element text */
 .button-text {
     flex-grow: 1;
     color: #fff;
@@ -145,8 +161,15 @@ nav ul {
     font-style: normal;
 }
 
+/* button column defined */
+.button-div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* arrow in button */
 .arrow {
-    margin-left: 5%;
+    margin-left: 40%;
     font-size: 10.0rem;
 }
 
@@ -157,10 +180,8 @@ nav ul {
     background-color: #5E0076;
     padding: 20px 50px;
     margin: 30 100px;
-    font-size: 16px;
     border: none;
     border-radius: 18px;
-    /* cursor: pointer; */
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -224,7 +245,7 @@ nav ul {
     border-color: #15FF10;
     cursor: pointer;
     position: relative;
-    margin-left: 5px;
+    margin-left: 5%;
 }
 
 #check {
@@ -252,48 +273,69 @@ nav ul {
 
 
 .icon-container {
-    display: flex;           /* Enables flexbox layout */
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
+    display: flex;
+    /* Enables flexbox layout */
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
 }
 
 .icon-circle {
-    width: 400px;       /* Set the width of the circle */
-    height: 400px;      /* Set the height of the circle */
-    background-color: #5E0076; /* Set the background color of the circle */
+    width: 400px;
+    /* Set the width of the circle */
+    height: 400px;
+    /* Set the height of the circle */
+    background-color: #5E0076;
+    /* Set the background color of the circle */
     border-radius: 50%;
 
 }
 
 .profile-text {
-    color:#37104E;
+    color: #37104E;
     text-align: center;
     font-size: 50px;
 
 }
 
 .horizontal-scroll {
-    display: flex;         /* Aligns children in a row */
-    overflow-x: auto;      /* Enables horizontal scrolling */
-    white-space: nowrap;   /* Prevents wrapping of content */
-    height: 100vh;         /* Example height */
-    align-items: stretch;  /* Stretch items to fill the container height */
+    display: flex;
+    /* Aligns children in a row */
+    overflow-x: auto;
+    /* Enables horizontal scrolling */
+    white-space: nowrap;
+    /* Prevents wrapping of content */
+    height: 100vh;
+    /* Example height */
+    align-items: stretch;
+    /* Stretch items to fill the container height */
 }
 
 .horizontal-section {
-    flex: 0 0 auto;        /* Prevents sections from growing or shrinking */
-    width: 100vw;         /* Each section takes full viewport width */
-    margin: 10px;         /* Optional margin for spacing between sections */
-    background-color: lightblue; /* Example background color */
-    display: flex;        /* To center content, if needed */
-    justify-content: center; /* Center content horizontally */
-    align-items: center;  /* Center content vertically */
+    flex: 0 0 auto;
+    /* Prevents sections from growing or shrinking */
+    width: 100vw;
+    /* Each section takes full viewport width */
+    margin: 10px;
+    /* Optional margin for spacing between sections */
+    background-color: lightblue;
+    /* Example background color */
+    display: flex;
+    /* To center content, if needed */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
 }
 
 .food-icon {
-    width: 400px;              /* Width of the square */
-    height: 400px;             /* Height of the square */
-    background-color: white;   /* Background color of the square */
+    width: 400px;
+    /* Width of the square */
+    height: 400px;
+    /* Height of the square */
+    background-color: white;
+    /* Background color of the square */
     border: 5px #37104E;
 }
 
@@ -302,10 +344,21 @@ nav ul {
 @media only screen and (max-device-width: 480px) {
 
     /* TOP BAR */
+
     h1 {
-        margin-top: 10%;
-        margin-bottom: 10%;
+        margin-top: 6%;
+        margin-bottom: 6%;
         font-size: 5.0rem;
+    }
+
+    .statusBar {
+        margin-top: 3px;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+        font-size: 3.0rem;
     }
 
     /* BACK ARROW */
@@ -341,13 +394,20 @@ nav ul {
     /* overall button style */
     .generic-button {
         padding: 2% 5%;
-        margin: 5% 8%;
-        font-size: 1.5rem;
+        margin: 5% 5%;
+        font-size: 4.0rem;
     }
 
-    /* button element text */
+    /* Define profile text */
+    .profile-text {
+        font-size: 4.0rem;
+    }
+
     .button-text {
         font-size: 4.0rem;
     }
 
+    .button-not-clickable {
+        font-size: 3.5rem;
+    }
 }

@@ -14,6 +14,13 @@
 <body>
     <header>
         <h1>Let's Cook!</h1>
+        <div class="statusBar">
+            <span>
+                Hello, <span class="userText">User</span>!
+            </span>
+            <span style="display: flex; align-items: center;"><span class="userPoints">120</span><img
+                    src="Images/coin.png" alt="" width="50" height="40"></span>
+        </div>
         <nav>
             <ul class="navBar">
                 <li><a href="index.html" class="nav-link active"><i class="fas fa-book-open"></i></a></li>
@@ -24,39 +31,46 @@
         </nav>
     </header>
     <div class="button-div main">
-        <button type="button" class="generic-button">
-            <div class="circle" onclick="toggleCircle(this)">
+        <div style=" display: flex; flex-direction: row; align-items: center;">
+            <div class="circle" data-name="tacos" onclick="toggleCircle(this)">
                 <i id="check" class="fas fa-check"></i>
             </div>
-            <a class="button-text" href="task.html">
+            <a class="generic-button" href="task.html">
                 <span>
                     Weekly Dish:<br /><br />
-                    Tacos
-                </span></a>
-            <span class="arrow">&#8250;</span>
-        </button>
-        <button type="button" class="generic-button">
-            <div class="circle" onclick="toggleCircle(this)">
+                    <span style="display: flex; align-items: center;">Tacos<img src="Images/Dishes/Tacos.png"
+                            alt="tacos image" width="60" height="60"></span>
+                </span>
+                <span class="arrow" style="margin-left: 20%;">&#8250;</span>
+            </a>
+        </div>
+
+        <div style=" display: flex; flex-direction: row; align-items: center;">
+            <div class="circle" data-name="japanese" onclick="toggleCircle(this)">
                 <i id="check" class="fas fa-check"></i>
             </div>
-            <a class="button-text" href="task.html">
+            <a class="generic-button" href="task.html">
                 <span>
                     Weekly Cuisine:<br /><br />
-                    Japanese
-                </span></a>
-            <span class="arrow">&#8250;</span>
-        </button>
-        <button type="button" class="generic-button">
-            <div class="circle" onclick="toggleCircle(this)">
+                    <span style="display: flex; align-items: center;">Italian<img src="Images/Countries/Italy.png"
+                            alt="italian flag image" width="60" height="60"></span>
+                </span>
+                <span class="arrow" style="margin-left: 20%;">&#8250;</span>
+            </a>
+        </div>
+
+        <div style=" display: flex; flex-direction: row; align-items: center;">
+            <div class="circle" data-name="lamb" onclick="toggleCircle(this)">
                 <i id="check" class="fas fa-check"></i>
             </div>
-            <a class="button-text" href="task.html">
+            <a class="generic-button" href="task.html">
                 <span>
                     Weekly Ingredient:<br /><br />
                     Lamb
-                </span></a>
-            <span class="arrow">&#8250;</span>
-        </button>
+                </span>
+                <span class="arrow" style="margin-left: 20%;">&#8250;</span>
+            </a>
+        </div>
     </div>
 </body>
 
