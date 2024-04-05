@@ -31,14 +31,14 @@ function toggleCircle(circle) {
 function toggleComplete(button) {
     if (!button.classList.contains('clicked')) {
         button.classList.toggle('clicked'); // Toggle the 'clicked' class
-        button.innnerHTML = "completed";
+        button.innerHTML = "completed";
         updateUserPoints("Joanna", 5)
         // toggle completed status for circle in database
         updateTaskStatus(button.dataset.name, 1)
 
     } else if (debugMode) { // special debug mode case - allows tasks to be unchecked
         button.classList.toggle('clicked'); // Toggle the 'clicked' class
-        button.innnerHTML = "complete";
+        button.innerHTML = "complete";
         updateUserPoints("Joanna", -5)
         updateTaskStatus(button.dataset.name, 0)
     }
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function applyCompleteState(complete, isClicked) {
         if (isClicked) {
             complete.classList.add('clicked'); // Add 'clicked' class if the circle has been clicked
-            complete.innnerHTML = "completed"
+            complete.innerHTML = "completed"
         }
     }
 
