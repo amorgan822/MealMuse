@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Let's Cook!</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom, #d80028, #ffa800);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    header {
+      background-color: #37104E;
+      color: #fff;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      overflow: hidden;
+      width: 100%;
+      z-index: 999;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .button-div {
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .complete-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #37104E;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .complete-button:hover {
+      background-color: #5E0076;
+    }
+
+    .points-indicator {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #37104E;
+    }
+
+    .points-circle {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #5E0076;
+      color: #fff;
+      border-radius: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="topBar">
+      <a class="back-text" href="index.html"><span class="arrow-left">&#8249;</span></a>
+      <h1>Let's Cook!</h1>
+    </div>
+    <nav>
+      <ul class="navBar">
+        <li><a href="index.html" class="nav-link active"><i class="fas fa-book-open"></i></a></li>
+        <li><a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i></a></li>
+        <li><a href="profileHome.html" class="nav-link"><i class="fas fa-user-circle"></i></a></li>
+        <li><a href="search.html" class="nav-link"><i class="fas fa-search"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="button-div main">
+    <div class="icon-container">
+      <!-- Icon can be added here if needed -->
+    </div>
+
+    <div class="recipe-description">
+      <h2>Weekly Ingredient: Lamb</h2>
+      <p>Lamb can be a wonderful option to add to your plate! Incorporate it as a source of protein, one that can pair well various ingredients.</p>
+      <p>Feel free to experiment with possible recipes! For an example of a full recipe and cooking instructions, please visit <a href="https://www.example.com/tacos-recipe" target="_blank">this link</a>.</p>
+    </div>
+    
+    <button class="complete-button">Complete</button>
+    
+    <!-- Points Indicator -->
+    <div class="points-indicator">
+      Points: <span class="points-circle"> 7 + 5 (bonus!)</span> <!-- Total points -->
+    </div>
+  </div>
+
+</body>
+
+</html>
