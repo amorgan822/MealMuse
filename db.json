@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Joanna",
-      "points": 100
+      "points": 115
     },
     {
       "id": 2,
@@ -21,13 +21,13 @@
       "id": 1,
       "name": "tacos",
       "points": 15,
-      "status": 0
+      "status": 1
     },
     {
       "id": 2,
       "name": "japanese",
       "points": 10,
-      "status": 0
+      "status": 1
     },
     {
       "id": 3,

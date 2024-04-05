@@ -17,7 +17,6 @@ function toggleCircle(circle) {
         updateUserPoints("Joanna", 5)
         // toggle completed status for circle in database
         updateTaskStatus(circle.dataset.name, 1)
-        // jsConfetti.addConfetti()
 
     } else if (debugMode) { // special debug mode case - allows tasks to be unchecked
         var checkmark = circle.querySelector('i');
@@ -25,6 +24,23 @@ function toggleCircle(circle) {
         circle.classList.toggle('clicked'); // Toggle the 'clicked' class
         updateUserPoints("Joanna", -5)
         updateTaskStatus(circle.dataset.name, 0)
+    }
+}
+
+// function to complete recipe on any page
+function toggleComplete(button) {
+    if (!button.classList.contains('clicked')) {
+        button.classList.toggle('clicked'); // Toggle the 'clicked' class
+        button.innnerHTML = "completed";
+        updateUserPoints("Joanna", 5)
+        // toggle completed status for circle in database
+        updateTaskStatus(button.dataset.name, 1)
+
+    } else if (debugMode) { // special debug mode case - allows tasks to be unchecked
+        button.classList.toggle('clicked'); // Toggle the 'clicked' class
+        button.innnerHTML = "complete";
+        updateUserPoints("Joanna", -5)
+        updateTaskStatus(button.dataset.name, 0)
     }
 }
 
@@ -40,6 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function applyCompleteState(complete, isClicked) {
+        if (isClicked) {
+            complete.classList.add('clicked'); // Add 'clicked' class if the circle has been clicked
+            complete.innnerHTML = "completed"
+        }
+    }
+
     // Display current username
     const users = document.querySelectorAll('.userText');
     users.forEach(user => {
@@ -52,6 +75,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Select all circle elements
     const circles = document.querySelectorAll('.circle');
 
+    // Select all complete elements
+    const completes = document.querySelectorAll('.complete');
+
     // Iterate over each circle element and fetch its state from the database
     circles.forEach(circle => {
         const task = circle.dataset.name; // Assuming you have a 'data-name' attribute on each circle element containing the circle name
@@ -63,6 +89,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Error processing circle:', error);
             });
     });
+
+    completes.forEach(complete => {
+        const task = complete.dataset.name; // Assuming you have a 'data-name' attribute on each circle element containing the circle name
+        getTaskStatus(task)
+            .then(isClicked => {
+                applyCompleteState(complete, isClicked); // Apply the fetched state to the circle element
+            })
+            .catch(error => {
+                console.error('Error processing circle:', error);
+            });
+    });
+
 });
 
 

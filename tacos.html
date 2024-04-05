@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="index.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;
     0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
@@ -28,18 +28,41 @@
   <div class="button-div main">
 
     <div class="icon-container">
-        <div class="food-icon">
+      <div class="food-icon">
+        <span style="display: flex; align-items: center;"><img src="Images/Dishes/Tacos.png" alt="tacos image"
+            width="400" height="400"></span>
+      </div>
+    </div>
+
+    <div>
+      <div style="display: flex; justify-content: center; margin: 2%; font-size: 5.0rem;">
+        Tacos
+      </div>
+      <div style="display: flex; justify-content: center; margin: 2%; font-size: 3.0rem;">
+        12 pts
+      </div>
+      <div style="display: flex; justify-content: center; margin: 2%; font-size: 4.0rem;">
+        Ingredients
+      </div>
+      <div class="recipe">
+        <div class="ingredients">
+          <ul>
+            <li>Tortillas (flour or corn)</li>
+            <li>Protein: Ground beef, Chicken, Shrimp, Fish, Beans</li>
+            <li>Onions</li>
+            <li>Bell Peppers</li>
+          </ul>
         </div>
+        <div class="instructions">
+          <p>Feel free to experiment! For a recipe and cooking instructions, please visit <a
+              href="https://feelgoodfoodie.net/recipe/ground-beef-tacos-napa-cabbage-guacamole/#wprm-recipe-container-5870"
+              target="_blank">this link</a>.</p>
+        </div>
+        <div class="generic-button complete" data-name="tacos" onclick="toggleComplete(this)">
+          complete
+        </div>
+      </div>
     </div>
-
-    <div class="button-not-clickable">
-      Tacos
-    </div>
-    <button class="generic-button">
-      complete
-    </button>
-
-  </div>
 
 </body>
 

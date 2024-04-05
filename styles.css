@@ -153,6 +153,10 @@ nav ul {
     background-color: #540069;
 }
 
+.complete.clicked {
+    background-color: #15FF10;
+}
+
 .button-text {
     flex-grow: 1;
     color: #fff;
@@ -337,10 +341,38 @@ nav ul {
     height: 400px;
     /* Height of the square */
     background-color: white;
-    /* Background color of the square */
-    border: 5px #37104E;
+    border-style: solid;
+    border-width: 0.5rem;
 }
 
+.recipe {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.ingredients {
+    margin-right: 20px;
+    /* Add some space between the ingredients and the paragraph */
+}
+
+.ingredients ul {
+    list-style: none;
+    /* Remove bullet points from the list */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.ingredients li {
+    font-size: 24px;
+    /* Set the font size for the ingredients */
+}
+
+.instructions p {
+    font-size: 16px;
+    /* Set the font size for the paragraph */
+    line-height: 1.5;
+    /* Set the line height for better readability */
+}
 
 /* MOBILE STYLE */
 @media only screen and (max-device-width: 480px) {
