@@ -2,138 +2,66 @@
 <html>
 
 <head>
-    <title>Let's Cook! - Search</title>
+    <title>Let's Cook!</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="index.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-        /* Add your custom styles here */
-        /* Define your bottom navigation bar styles */
-        nav.bottom-nav {
-            background-color: #37104E;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 999;
-        }
-
-        .navBar {
-            overflow: hidden;
-            padding: 0;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .nav-link {
-            color: #fff;
-            text-decoration: none;
-            padding: 15px;
-            font-size: 1.2rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .filter-header {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #37104E;
-        }
-
-        .dish-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 50px;
-        }
-
-        .dish-button {
-            background-color: #37104E;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            text-decoration: none;
-        }
-
-        .dish-button:hover {
-            background-color: #5E0076;
-        }
-
-        /* Additional styles */
-        header {
-            text-align: center;
-            background-color: #37104E;
-            color: #fff;
-            padding: 20px 0;
-            margin-bottom: 20px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .page-title {
-            font-size: 2rem;
-        }
-
-        .search-indicator {
-            font-size: 1.2rem;
-            color: #37104E;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;
+    0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1 class="page-title">Let's Cook! - Search Page</h1>
-        <div class="search-indicator">Filtering by Dishes Containing Lamb</div>
+        <h1>Let's Cook!</h1>
+        <nav>
+            <ul class="navBar">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-book-open"></i></a></li>
+                <li><a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i></a></li>
+                <li><a href="profileHome.html" class="nav-link"><i class="fas fa-user-circle"></i></a></li>
+                <li><a href="search.html" class="nav-link active"><i class="fas fa-search"></i></a></li>
+            </ul>
+        </nav>
     </header>
-
-    <div class="filter-header">Filter by Ingredient:</div>
     <div class="button-div main">
         <div class="button-not-clickable">
-            Lamb
+            Search
+
+            <div>
+                <input type="text" id="textInput" name="textInput" value="lamb" style="font-size: 24px;">
+            </div>
+
         </div>
-    </div>
 
-    <div class="filter-header">Choose a Dish:</div>
-    <div class="dish-buttons">
-        <a href="#" class="dish-button">Lamb Curry</a>
-        <a href="#" class="dish-button">Grilled Lamb Chops</a>
-        <a href="#" class="dish-button">Lamb Biryani</a>
-        <a href="#" class="dish-button">Lamb Kebabs</a>
-        <a href="#" class="dish-button">Shepherd's Pie</a>
-        <a href="#" class="dish-button">Lamb Stew</a>
-        <a href="#" class="dish-button">Lamb Gyro</a>
-        <a href="#" class="dish-button">Rack of Lamb</a>
-        <a href="#" class="dish-button">Lamb Burger</a>
-        <a href="#" class="dish-button">Lamb Tagine</a>
-        <a href="#" class="dish-button">Lamb Meatballs</a>
-        <a href="#" class="dish-button">Lamb Pizza</a>
-        <a href="#" class="dish-button">Lamb Tacos</a>
-        <a href="#" class="dish-button">Lamb Stir Fry</a>
-        <a href="#" class="dish-button">Lamb Shawarma</a>
-    </div>
+        <a class="generic-button" href="lamb-curry.html">
+            <span>
+                Lamb Curry
+            </span>
+            <span class="arrow">&#8250;</span>
+        </a>
 
-    <!-- Bottom Navigation Bar -->
-    <nav class="bottom-nav">
-        <ul class="navBar">
-            <li><a href="index.html" class="nav-link"><i class="fas fa-book-open"></i></a></li>
-            <li><a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i></a></li>
-            <li><a href="profileHome.html" class="nav-link"><i class="fas fa-user-circle"></i></a></li>
-            <li><a href="search.html" class="nav-link active"><i class="fas fa-search"></i></a></li>
-        </ul>
-    </nav>
+        <a class="generic-button" href="roast-lamb.html">
+            <span>
+                Roast Lamb
+            </span>
+            <span class="arrow">&#8250;</span>
+        </a>
+
+        <a class="generic-button" href="lamb-biryani.html">
+            <span>
+                Lamb Biryani
+            </span>
+            <span class="arrow">&#8250;</span>
+        </a>
+
+        <a class="generic-button" href="lamb-kebab.html">
+            <span>
+                Lamb Kebab
+            </span>
+            <span class="arrow">&#8250;</span>
+        </a>
+
+    </div>
 </body>
 
 </html>
