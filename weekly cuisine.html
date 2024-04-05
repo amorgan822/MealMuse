@@ -98,12 +98,12 @@
             font-weight: 600;
             font-size: 24px;
             font-style: normal;
+            text-decoration: none;
         }
 
         .search-button:hover {
             background-color: #5E0076;
         }
-
     </style>
 </head>
 
@@ -126,8 +126,11 @@
     <div class="button-div main">
         <div class="task-description">
             <h2>Weekly Cuisine: Italian</h2>
-            <p>For this week's task, you are required to find and complete a dish in Italian cuisine. Search for a dish that fits this particular cuisine, prepare the dish, and enjoy it! Be sure to explore traditional Italian flavors and cooking techniques.</p>
-            <p>The base points for completing this task are 5. Additionally, you will earn points equivalent to the difficulty of the dish you choose. Happy cooking!</p>
+            <p>For this week's task, you are required to find and complete a dish in Italian cuisine. Search for a dish
+                that fits this particular cuisine, prepare the dish, and enjoy it! Be sure to explore traditional
+                Italian flavors and cooking techniques.</p>
+            <p>The base points for completing this task are 5. Additionally, you will earn points equivalent to the
+                difficulty of the dish you choose. Happy cooking!</p>
         </div>
 
         <button class="complete-button">Complete</button>
@@ -138,7 +141,11 @@
         </div>
 
         <!-- Search for Italian Cuisine Button -->
-        <button class="search-button">Search for dishes in Italian cuisine</button>
+        <a class="search-button" href="searchpagecuisine.html">
+            <span>
+                <span style="display: flex; align-items: center;">Search for dishes in Italian cuisine</span>
+            </span>
+        </a>
     </div>
 </body>
 
