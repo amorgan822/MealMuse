@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="index.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;
     0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
@@ -28,18 +29,41 @@
   <div class="button-div main">
 
     <div class="icon-container">
-        <div class="food-icon">
+      <div class="food-icon">
+        <span style="display: flex; align-items: center;"><img src="Images/Dishes/IceCream.png" alt="ice cream image"
+            width="400" height="400"></span>
+      </div>
+    </div>
+
+    <div>
+      <div style="display: flex; justify-content: center; margin: 2%; font-size: 5.0rem;">
+        Ice Cream
+      </div>
+      <div style="display: flex; justify-content: center; margin: 2%; font-size: 3.0rem;">
+        5 pts
+      </div>
+      <div style="display: flex; justify-content: center; margin: 2%; font-size: 4.0rem;">
+        Ingredients
+      </div>
+      <div class="recipe">
+        <div class="ingredients">
+          <ul style="font-size: 2.0rem;">
+            <li>Milk</li>
+            <li>Cream</li>
+            <li>Sugar</li>
+            <li>Flavorings (e.g., vanilla extract, fruit puree)</li>
+          </ul>
         </div>
+        <div class="instructions" style="font-size: 2.0rem;">
+          <p>Feel free to experiment! For a recipe and instructions, please visit <a
+              href="https://www.browneyedbaker.com/homemade-vanilla-ice-cream-recipe/"
+              target="_blank">this link</a>.</p>
+        </div>
+        <div class="generic-button complete" data-name="icecream" onclick="toggleComplete(this)">
+          complete
+        </div>
+      </div>
     </div>
-
-    <div class="button-not-clickable">
-      Ice Cream
-    </div>
-    <button class="generic-button">
-      complete
-    </button>
-
-  </div>
 
 </body>
 
