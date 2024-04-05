@@ -83,43 +83,28 @@
       font-style: normal;
     }
 
-    /* Bottom Navigation Bar */
-    nav.bottom-nav {
-      background-color: #37104E;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      z-index: 999;
-    }
-
-    .navBar {
-      overflow: hidden;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .nav-link {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      font-size: 1.2rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
   </style>
 </head>
 
 <body>
   <header>
     <div class="topBar">
-      <a class="back-text" href="search.html"><span class="arrow-left">&#8249;</span></a>
-      <h1>Weekly Task: Complete a Recipe in Japanese Cuisine</h1>
+      <a class="back-text" href="index.html"><span class="arrow-left">&#8249;</span></a>
+      <h1>Let's Cook!</h1>
     </div>
+    <nav>
+      <ul class="navBar">
+        <li><a href="index.html" class="nav-link active"><i class="fas fa-book-open"></i></a></li>
+        <li><a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i></a></li>
+        <li><a href="profileHome.html" class="nav-link"><i class="fas fa-user-circle"></i></a></li>
+        <li><a href="search.html" class="nav-link"><i class="fas fa-search"></i></a></li>
+      </ul>
+    </nav>
   </header>
+
   <div class="button-div main">
     <div class="task-description">
+      <h2>Japanese Cuisine</h2>
       <p>For this week's task, you are required to find and complete a recipe in Japanese cuisine. Search for a recipe that fits this particular cuisine, prepare the dish, and enjoy it! Be sure to explore traditional Japanese flavors and cooking techniques.</p>
       <p>The base points for completing this task are 5. Additionally, you will earn points equivalent to the difficulty of the dish you choose. Happy cooking!</p>
     </div>
@@ -131,14 +116,6 @@
       Points: <span class="points-circle">5 (base points) + [dish points]</span> <!-- Total points -->
     </div>
   </div>
-
-  <!-- Bottom Navigation Bar -->
-  <nav class="bottom-nav">
-    <ul class="navBar">
-      <li><a href="browse.html" class="nav-link">Browse</a></li>
-    </ul>
-  </nav>
-
 </body>
 
 </html>
