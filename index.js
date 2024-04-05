@@ -1,8 +1,12 @@
+// import { JSConfetti } from 'js-confetti'
+
 // toggle debug mode
 debugMode = true;
 
 // Select current user
 userName = "Joanna"
+
+backDish = false;
 
 // Function to toggle circle on homepage upon task completion
 function toggleCircle(circle) {
@@ -13,6 +17,7 @@ function toggleCircle(circle) {
         updateUserPoints("Joanna", 5)
         // toggle completed status for circle in database
         updateTaskStatus(circle.dataset.name, 1)
+        // jsConfetti.addConfetti()
 
     } else if (debugMode) { // special debug mode case - allows tasks to be unchecked
         var checkmark = circle.querySelector('i');
