@@ -3,10 +3,17 @@
 // toggle debug mode
 debugMode = true;
 
+// toggle db mode
+dbMode = false;
+
 // Select current user
 userName = "Joanna"
 
 backDish = false;
+
+// const canvas = document.querySelector('#confetti');
+
+// const jsConfetti = new JSConfetti();
 
 // Function to toggle circle on homepage upon task completion
 function toggleCircle(circle) {
@@ -14,16 +21,26 @@ function toggleCircle(circle) {
         var checkmark = circle.querySelector('i');
         checkmark.classList.toggle('show');
         circle.classList.toggle('clicked'); // Toggle the 'clicked' class
-        updateUserPoints("Joanna", 5)
-        // toggle completed status for circle in database
-        updateTaskStatus(circle.dataset.name, 1)
+
+        // jsConfetti.addConfetti();
+        makeItRain();
+
+        if (dbMode) {
+            updateUserPoints("Joanna", 5)
+
+            // toggle completed status for circle in database
+            updateTaskStatus(circle.dataset.name, 1)
+        }
 
     } else if (debugMode) { // special debug mode case - allows tasks to be unchecked
         var checkmark = circle.querySelector('i');
         checkmark.classList.toggle('show');
         circle.classList.toggle('clicked'); // Toggle the 'clicked' class
-        updateUserPoints("Joanna", -5)
-        updateTaskStatus(circle.dataset.name, 0)
+
+        if (dbMode) {
+            updateUserPoints("Joanna", -5)
+            updateTaskStatus(circle.dataset.name, 0)
+        }
     }
 }
 
@@ -32,75 +49,37 @@ function toggleComplete(button) {
     if (!button.classList.contains('clicked')) {
         button.classList.toggle('clicked'); // Toggle the 'clicked' class
         button.innerHTML = "completed";
-        updateUserPoints("Joanna", 5)
-        // toggle completed status for circle in database
-        updateTaskStatus(button.dataset.name, 1)
+
+        if (dbMode) {
+            updateUserPoints("Joanna", 5)
+            // toggle completed status for circle in database
+            updateTaskStatus(button.dataset.name, 1)
+        }
 
     } else if (debugMode) { // special debug mode case - allows tasks to be unchecked
         button.classList.toggle('clicked'); // Toggle the 'clicked' class
         button.innerHTML = "complete";
-        updateUserPoints("Joanna", -5)
-        updateTaskStatus(button.dataset.name, 0)
+
+        if (dbMode) {
+            updateUserPoints("Joanna", -5)
+            updateTaskStatus(button.dataset.name, 0)
+        }
     }
 }
 
 // /* function for checks on load page */
 document.addEventListener('DOMContentLoaded', function () {
-
-    // Function to apply the circle state to the corresponding circle element
-    function applyCircleState(circle, isClicked) {
-        if (isClicked) {
-            circle.classList.add('clicked'); // Add 'clicked' class if the circle has been clicked
-            var checkmark = circle.querySelector('i');
-            checkmark.classList.toggle('show');
-        }
-    }
-
-    function applyCompleteState(complete, isClicked) {
-        if (isClicked) {
-            complete.classList.add('clicked'); // Add 'clicked' class if the circle has been clicked
-            complete.innerHTML = "completed"
-        }
-    }
-
     // Display current username
     const users = document.querySelectorAll('.userText');
     users.forEach(user => {
         user.innerHTML = userName;
     });
 
-    // Display current user's points
-    updateUserPointsToUserBar()
-
-    // Select all circle elements
-    const circles = document.querySelectorAll('.circle');
-
-    // Select all complete elements
-    const completes = document.querySelectorAll('.complete');
-
-    // Iterate over each circle element and fetch its state from the database
-    circles.forEach(circle => {
-        const task = circle.dataset.name; // Assuming you have a 'data-name' attribute on each circle element containing the circle name
-        getTaskStatus(task)
-            .then(isClicked => {
-                applyCircleState(circle, isClicked); // Apply the fetched state to the circle element
-            })
-            .catch(error => {
-                console.error('Error processing circle:', error);
-            });
-    });
-
-    completes.forEach(complete => {
-        const task = complete.dataset.name; // Assuming you have a 'data-name' attribute on each circle element containing the circle name
-        getTaskStatus(task)
-            .then(isClicked => {
-                applyCompleteState(complete, isClicked); // Apply the fetched state to the circle element
-            })
-            .catch(error => {
-                console.error('Error processing circle:', error);
-            });
-    });
-
+    if (dbMode) {
+        // Display current user's points
+        updateUserPointsToUserBar()
+        updateCompleteStates();
+    }
 });
 
 
@@ -262,4 +241,78 @@ function updateTaskStatus(name, bool) {
             console.error('Error fetching task status:', error);
             throw error;
         });
+}
+
+// Function to apply circle and complete states
+function updateCompleteStates() {
+    // Select all circle elements
+    const circles = document.querySelectorAll('.circle');
+
+    // Select all complete elements
+    const completes = document.querySelectorAll('.complete');
+
+    // Iterate over each circle element and fetch its state from the database
+
+    circles.forEach(circle => {
+        const task = circle.dataset.name; // Assuming you have a 'data-name' attribute on each circle element containing the circle name
+        getTaskStatus(task)
+            .then(isClicked => {
+                applyCircleState(circle, isClicked); // Apply the fetched state to the circle element
+            })
+            .catch(error => {
+                console.error('Error processing circle:', error);
+            });
+    });
+
+    completes.forEach(complete => {
+        const task = complete.dataset.name; // Assuming you have a 'data-name' attribute on each circle element containing the circle name
+        getTaskStatus(task)
+            .then(isClicked => {
+                applyCompleteState(complete, isClicked); // Apply the fetched state to the circle element
+            })
+            .catch(error => {
+                console.error('Error processing circle:', error);
+            });
+    });
+}
+
+//HELPER FUNCTIONS
+// Function to apply the circle state to the corresponding circle element
+function applyCircleState(circle, isClicked) {
+    if (isClicked) {
+        circle.classList.add('clicked'); // Add 'clicked' class if the circle has been clicked
+        var checkmark = circle.querySelector('i');
+        checkmark.classList.toggle('show');
+    }
+}
+
+function applyCompleteState(complete, isClicked) {
+    if (isClicked) {
+        complete.classList.add('clicked'); // Add 'clicked' class if the circle has been clicked
+        complete.innerHTML = "completed"
+    }
+}
+
+function makeItRain() {
+    // var end = Date.now() + (2 * 1000);
+
+    function frame() {
+        confetti({
+            particleCount: 100,
+            angle: 60,
+            spread: 70,
+            origin: { x: 0, y: 0.6 },
+        });
+        confetti({
+            particleCount: 100,
+            angle: 120,
+            spread: 70,
+            origin: { x: 1, y: 0.6 },
+        });
+
+        // if (Date.now() < end) {
+        //     requestAnimationFrame(frame);
+        // }
+    };
+    frame();
 }
