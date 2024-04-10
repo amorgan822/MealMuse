@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Display current user's points
         updateUserPointsToUserBar()
         updateCompleteStates();
+        updateAllTaskPoints();
     }
 });
 
@@ -241,6 +242,50 @@ function updateTaskStatus(name, bool) {
             console.error('Error fetching task status:', error);
             throw error;
         });
+}
+
+// Function to get the points of the task
+function getTaskPoints(name) {
+    // Assume you have an API endpoint to fetch the circle state by name
+    return fetch(`http://localhost:3000/tasks?name=${name}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(tasks => {
+            if (tasks.length > 0) {
+                return tasks[0].points; // Return points of first matching task
+            } else {
+                throw new Error('Task not found');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching task status:', error);
+            throw error;
+        });
+}
+
+// Function to display user points
+function updateAllTaskPoints() {
+    const pointList = document.querySelectorAll('.taskPts');
+
+    pointList.forEach(taskElement => {
+        getTaskPoints(taskElement.dataset.name).then(points => {
+            taskElement.innerHTML = points;
+        }).catch(e => {
+            if (e.message == "Failed to fetch") {
+                updateUserPointsToUserBar()
+            }
+        });
+
+    });
+
+
+
+
+
 }
 
 // Function to apply circle and complete states

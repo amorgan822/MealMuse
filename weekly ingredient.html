@@ -4,6 +4,7 @@
 <head>
     <title>Weekly Ingredient: Lamb</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="index.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;
@@ -138,7 +139,12 @@
 
         <!-- Points Indicator -->
         <div class="points-indicator">
-            Points: <span class="points-circle"> 7 + 5 (bonus!)</span> <!-- Total points -->
+            Points: <span class="points-circle">
+                <div style="display: flex; flex-direction: row;">
+                    <div class="taskPts" data-name="lamb">5</div>
+                    <div>pts + 5 [bonus points]</div>
+                </div>
+            </span>
         </div>
 
         <!-- Search for Lamb Dishes Button -->
